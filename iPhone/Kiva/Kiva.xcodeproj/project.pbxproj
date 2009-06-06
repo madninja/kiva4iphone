@@ -386,7 +386,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = /Users/jbardin/iPhone/Three20/src;
+				HEADER_SEARCH_PATHS = ../Three20/src;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ljson",
@@ -408,7 +408,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = /Users/jbardin/iPhone/Three20/src;
+				HEADER_SEARCH_PATHS = ../Three20/src;
 				OTHER_LDFLAGS = (
 					"-ljson",
 					"-ObjC",
