@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* KivaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* KivaAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
+		C21DE6120F878E4B00B194CF /* LoansDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C21DE6110F878E4B00B194CF /* LoansDataSource.m */; };
+		C21DE6DF0F879AA200B194CF /* DefaultLoanImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C21DE6DE0F879AA200B194CF /* DefaultLoanImage.jpg */; };
+		C21DE7290F87A18000B194CF /* LoanTableField.m in Sources */ = {isa = PBXBuildFile; fileRef = C21DE7280F87A18000B194CF /* LoanTableField.m */; };
+		C21DE9430F87B4F200B194CF /* LoanTableFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C21DE9420F87B4F200B194CF /* LoanTableFieldCell.m */; };
+		C274F1760F87747400B42E0C /* LoansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C274F1740F87747400B42E0C /* LoansViewController.m */; };
+		C277C86C0F88086800FE86EB /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C277C86B0F88086800FE86EB /* MainTabBarController.m */; };
+		C277C8760F88090900FE86EB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C277C8750F88090900FE86EB /* RegisterViewController.xib */; };
+		C277C87A0F88093000FE86EB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C277C8780F88093000FE86EB /* RegisterViewController.m */; };
+		C280B91F0F89A3F60077B709 /* yourloans.png in Resources */ = {isa = PBXBuildFile; fileRef = C280B91B0F89A3F60077B709 /* yourloans.png */; };
+		C280B9200F89A3F60077B709 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = C280B91C0F89A3F60077B709 /* about.png */; };
+		C280B9210F89A3F60077B709 /* lend.png in Resources */ = {isa = PBXBuildFile; fileRef = C280B91D0F89A3F60077B709 /* lend.png */; };
+		C280B9220F89A3F60077B709 /* recentloans.png in Resources */ = {isa = PBXBuildFile; fileRef = C280B91E0F89A3F60077B709 /* recentloans.png */; };
+		C287AD650F8957EF0031FADA /* Delay.png in Resources */ = {isa = PBXBuildFile; fileRef = C287AD640F8957EF0031FADA /* Delay.png */; };
+		C287ADCB0F8962F30031FADA /* JournalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C287ADCA0F8962F30031FADA /* JournalsViewController.m */; };
+		C287ADEB0F8963D80031FADA /* JournalsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C287ADEA0F8963D80031FADA /* JournalsDataSource.m */; };
+		C287AE5A0F896E750031FADA /* JournalTableField.m in Sources */ = {isa = PBXBuildFile; fileRef = C287AE570F896E750031FADA /* JournalTableField.m */; };
+		C287AE5B0F896E750031FADA /* JournalTableFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C287AE590F896E750031FADA /* JournalTableFieldCell.m */; };
+		C28990600F88446F00E4BB55 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C289905F0F88446F00E4BB55 /* arrow.png */; };
+		C28990900F88590F00E4BB55 /* LoanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C289908F0F88590F00E4BB55 /* LoanViewController.xib */; };
+		C289909A0F885F4900E4BB55 /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28990980F885F4900E4BB55 /* LoanViewController.m */; };
+		C28992230F88783F00E4BB55 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C28992220F88783F00E4BB55 /* Icon.png */; };
+		C2DFF13C0FBF81130099D0A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		C2DFF14E0FBF81470099D0A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DFF14D0FBF81470099D0A3 /* QuartzCore.framework */; };
+		C2E5C7800FBF7A6000FEDCBD /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E5C77F0FBF7A5200FEDCBD /* libThree20.a */; };
+		C2E5C7890FBF7B0A00FEDCBD /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2E5C7880FBF7B0A00FEDCBD /* Three20.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2E5C77E0FBF7A5200FEDCBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2E5C7770FBF7A5200FEDCBD /* Three20.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20;
+		};
+		C2E5C7850FBF7AE800FEDCBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2E5C7770FBF7A5200FEDCBD /* Three20.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* KivaAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KivaAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* KivaAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KivaAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Kiva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiva.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AB4B0D9B1048005BE974 /* Kiva_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kiva_Prefix.pch; sourceTree = "<group>"; };
+		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C21DE6100F878E4B00B194CF /* LoansDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoansDataSource.h; sourceTree = "<group>"; };
+		C21DE6110F878E4B00B194CF /* LoansDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoansDataSource.m; sourceTree = "<group>"; };
+		C21DE6DE0F879AA200B194CF /* DefaultLoanImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DefaultLoanImage.jpg; sourceTree = "<group>"; };
+		C21DE7270F87A18000B194CF /* LoanTableField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanTableField.h; sourceTree = "<group>"; };
+		C21DE7280F87A18000B194CF /* LoanTableField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanTableField.m; sourceTree = "<group>"; };
+		C21DE9410F87B4F200B194CF /* LoanTableFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanTableFieldCell.h; sourceTree = "<group>"; };
+		C21DE9420F87B4F200B194CF /* LoanTableFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanTableFieldCell.m; sourceTree = "<group>"; };
+		C272FE590F88222200C430B5 /* LendingActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LendingActionsViewController.h; sourceTree = "<group>"; };
+		C272FE5A0F88222200C430B5 /* LendingActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LendingActionsViewController.m; sourceTree = "<group>"; };
+		C272FE620F88235800C430B5 /* LendingActionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LendingActionsDataSource.h; sourceTree = "<group>"; };
+		C272FE630F88235800C430B5 /* LendingActionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LendingActionsDataSource.m; sourceTree = "<group>"; };
+		C272FE960F88246E00C430B5 /* LendingActionTableField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LendingActionTableField.h; sourceTree = "<group>"; };
+		C272FE970F88246E00C430B5 /* LendingActionTableField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LendingActionTableField.m; sourceTree = "<group>"; };
+		C272FE980F88246E00C430B5 /* LendingActionTableFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LendingActionTableFieldCell.h; sourceTree = "<group>"; };
+		C272FE990F88246E00C430B5 /* LendingActionTableFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LendingActionTableFieldCell.m; sourceTree = "<group>"; };
+		C274F1740F87747400B42E0C /* LoansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoansViewController.m; sourceTree = "<group>"; };
+		C274F1750F87747400B42E0C /* LoansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoansViewController.h; sourceTree = "<group>"; };
+		C277C86A0F88086800FE86EB /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		C277C86B0F88086800FE86EB /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		C277C8750F88090900FE86EB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		C277C8780F88093000FE86EB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		C277C8790F88093000FE86EB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		C280B91B0F89A3F60077B709 /* yourloans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yourloans.png; sourceTree = "<group>"; };
+		C280B91C0F89A3F60077B709 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		C280B91D0F89A3F60077B709 /* lend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lend.png; sourceTree = "<group>"; };
+		C280B91E0F89A3F60077B709 /* recentloans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recentloans.png; sourceTree = "<group>"; };
+		C287AD640F8957EF0031FADA /* Delay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delay.png; sourceTree = "<group>"; };
+		C287ADC90F8962F30031FADA /* JournalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalsViewController.h; sourceTree = "<group>"; };
+		C287ADCA0F8962F30031FADA /* JournalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalsViewController.m; sourceTree = "<group>"; };
+		C287ADE90F8963D80031FADA /* JournalsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalsDataSource.h; sourceTree = "<group>"; };
+		C287ADEA0F8963D80031FADA /* JournalsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalsDataSource.m; sourceTree = "<group>"; };
+		C287AE560F896E750031FADA /* JournalTableField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalTableField.h; sourceTree = "<group>"; };
+		C287AE570F896E750031FADA /* JournalTableField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalTableField.m; sourceTree = "<group>"; };
+		C287AE580F896E750031FADA /* JournalTableFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalTableFieldCell.h; sourceTree = "<group>"; };
+		C287AE590F896E750031FADA /* JournalTableFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalTableFieldCell.m; sourceTree = "<group>"; };
+		C289905F0F88446F00E4BB55 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		C289908F0F88590F00E4BB55 /* LoanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoanViewController.xib; sourceTree = "<group>"; };
+		C28990980F885F4900E4BB55 /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
+		C28990990F885F4900E4BB55 /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewController.h; sourceTree = "<group>"; };
+		C28991F20F88758A00E4BB55 /* Templates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Templates.h; sourceTree = "<group>"; };
+		C28992220F88783F00E4BB55 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C2DFF14D0FBF81470099D0A3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C2E5C7770FBF7A5200FEDCBD /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../Three20/src/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
+		C2E5C7880FBF7B0A00FEDCBD /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = ../Three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				C2E5C7800FBF7A6000FEDCBD /* libThree20.a in Frameworks */,
+				C2DFF13C0FBF81130099D0A3 /* CoreGraphics.framework in Frameworks */,
+				C2DFF14E0FBF81470099D0A3 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* KivaAppDelegate.h */,
+				1D3623250D0F684500981E51 /* KivaAppDelegate.m */,
+				C274F1750F87747400B42E0C /* LoansViewController.h */,
+				C274F1740F87747400B42E0C /* LoansViewController.m */,
+				C21DE6100F878E4B00B194CF /* LoansDataSource.h */,
+				C21DE6110F878E4B00B194CF /* LoansDataSource.m */,
+				C21DE7270F87A18000B194CF /* LoanTableField.h */,
+				C21DE7280F87A18000B194CF /* LoanTableField.m */,
+				C21DE9410F87B4F200B194CF /* LoanTableFieldCell.h */,
+				C21DE9420F87B4F200B194CF /* LoanTableFieldCell.m */,
+				C277C86A0F88086800FE86EB /* MainTabBarController.h */,
+				C277C86B0F88086800FE86EB /* MainTabBarController.m */,
+				C277C8790F88093000FE86EB /* RegisterViewController.h */,
+				C277C8780F88093000FE86EB /* RegisterViewController.m */,
+				C272FE590F88222200C430B5 /* LendingActionsViewController.h */,
+				C272FE5A0F88222200C430B5 /* LendingActionsViewController.m */,
+				C272FE620F88235800C430B5 /* LendingActionsDataSource.h */,
+				C272FE630F88235800C430B5 /* LendingActionsDataSource.m */,
+				C272FE960F88246E00C430B5 /* LendingActionTableField.h */,
+				C272FE970F88246E00C430B5 /* LendingActionTableField.m */,
+				C272FE980F88246E00C430B5 /* LendingActionTableFieldCell.h */,
+				C272FE990F88246E00C430B5 /* LendingActionTableFieldCell.m */,
+				C28990990F885F4900E4BB55 /* LoanViewController.h */,
+				C28990980F885F4900E4BB55 /* LoanViewController.m */,
+				C28991F20F88758A00E4BB55 /* Templates.h */,
+				C287ADC90F8962F30031FADA /* JournalsViewController.h */,
+				C287ADCA0F8962F30031FADA /* JournalsViewController.m */,
+				C287ADE90F8963D80031FADA /* JournalsDataSource.h */,
+				C287ADEA0F8963D80031FADA /* JournalsDataSource.m */,
+				C287AE560F896E750031FADA /* JournalTableField.h */,
+				C287AE570F896E750031FADA /* JournalTableField.m */,
+				C287AE580F896E750031FADA /* JournalTableFieldCell.h */,
+				C287AE590F896E750031FADA /* JournalTableFieldCell.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Kiva.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Kiva */ = {
+			isa = PBXGroup;
+			children = (
+				C2E5C7880FBF7B0A00FEDCBD /* Three20.bundle */,
+				C2E5C7770FBF7A5200FEDCBD /* Three20.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				C2DFF14D0FBF81470099D0A3 /* QuartzCore.framework */,
+			);
+			name = Kiva;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AB4B0D9B1048005BE974 /* Kiva_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C280B91B0F89A3F60077B709 /* yourloans.png */,
+				C280B91C0F89A3F60077B709 /* about.png */,
+				C280B91D0F89A3F60077B709 /* lend.png */,
+				C280B91E0F89A3F60077B709 /* recentloans.png */,
+				C287AD640F8957EF0031FADA /* Delay.png */,
+				C28992220F88783F00E4BB55 /* Icon.png */,
+				C289908F0F88590F00E4BB55 /* LoanViewController.xib */,
+				C277C8750F88090900FE86EB /* RegisterViewController.xib */,
+				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
+				C21DE6DE0F879AA200B194CF /* DefaultLoanImage.jpg */,
+				C289905F0F88446F00E4BB55 /* arrow.png */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765070DF74369002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2E5C7780FBF7A5200FEDCBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2E5C77F0FBF7A5200FEDCBD /* libThree20.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Kiva */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Kiva" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2E5C7860FBF7AE800FEDCBD /* PBXTargetDependency */,
+			);
+			name = Kiva;
+			productName = Kiva;
+			productReference = 1D6058910D05DD3D006BFB54 /* Kiva.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Kiva" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Kiva */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C2E5C7780FBF7A5200FEDCBD /* Products */;
+					ProjectRef = C2E5C7770FBF7A5200FEDCBD /* Three20.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Kiva */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C2E5C77F0FBF7A5200FEDCBD /* libThree20.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20.a;
+			remoteRef = C2E5C77E0FBF7A5200FEDCBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
+				C21DE6DF0F879AA200B194CF /* DefaultLoanImage.jpg in Resources */,
+				C277C8760F88090900FE86EB /* RegisterViewController.xib in Resources */,
+				C28990600F88446F00E4BB55 /* arrow.png in Resources */,
+				C28990900F88590F00E4BB55 /* LoanViewController.xib in Resources */,
+				C28992230F88783F00E4BB55 /* Icon.png in Resources */,
+				C287AD650F8957EF0031FADA /* Delay.png in Resources */,
+				C280B91F0F89A3F60077B709 /* yourloans.png in Resources */,
+				C280B9200F89A3F60077B709 /* about.png in Resources */,
+				C280B9210F89A3F60077B709 /* lend.png in Resources */,
+				C280B9220F89A3F60077B709 /* recentloans.png in Resources */,
+				C2E5C7890FBF7B0A00FEDCBD /* Three20.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* KivaAppDelegate.m in Sources */,
+				C274F1760F87747400B42E0C /* LoansViewController.m in Sources */,
+				C21DE6120F878E4B00B194CF /* LoansDataSource.m in Sources */,
+				C21DE7290F87A18000B194CF /* LoanTableField.m in Sources */,
+				C21DE9430F87B4F200B194CF /* LoanTableFieldCell.m in Sources */,
+				C277C86C0F88086800FE86EB /* MainTabBarController.m in Sources */,
+				C277C87A0F88093000FE86EB /* RegisterViewController.m in Sources */,
+				C289909A0F885F4900E4BB55 /* LoanViewController.m in Sources */,
+				C287ADCB0F8962F30031FADA /* JournalsViewController.m in Sources */,
+				C287ADEB0F8963D80031FADA /* JournalsDataSource.m in Sources */,
+				C287AE5A0F896E750031FADA /* JournalTableField.m in Sources */,
+				C287AE5B0F896E750031FADA /* JournalTableFieldCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2E5C7860FBF7AE800FEDCBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20;
+			targetProxy = C2E5C7850FBF7AE800FEDCBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Kiva_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Kiva;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Kiva_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Kiva;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "$HOME/Library/SDKs/JSON/$(PLATFORM_NAME).sdk";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/jbardin/iPhone/Three20/src;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ljson",
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "$HOME/Library/SDKs/JSON/$(PLATFORM_NAME).sdk";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/jbardin/iPhone/Three20/src;
+				OTHER_LDFLAGS = (
+					"-ljson",
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Kiva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Kiva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
