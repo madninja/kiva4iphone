@@ -63,7 +63,7 @@
 		[loanDescriptionText sizeToFit];
 		loanImage.contentMode = UIViewContentModeScaleAspectFit;
 		//loanImage.backgroundImageDefault =[UIImage imageNamed:@"Delay.png"];
-		//loanImage.backgroundImageURL =  [NSString stringWithFormat:image_template, @"w325h250", [[loan objectForKey:@"image"] objectForKey:@"id"]];
+		loanImage.image =  [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:image_template, @"w325h250", [[loan objectForKey:@"image"] objectForKey:@"id"]]]]];
 	}
 	[json release];
 	request.response = nil;
