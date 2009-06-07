@@ -30,11 +30,11 @@
 
 
 - (void)load:(TTURLRequestCachePolicy)cachePolicy nextPage:(BOOL)nextPage {
-	TTURLRequest *request = [TTURLRequest requestWithURL:@"http://api.kivaws.org/v1/lenders/HMSBeagle/loans.json?sort_by=newest" delegate:self];
+	TTURLRequest *request = [TTURLRequest requestWithURL:@"http://api.kivaws.org/v1/journal_entries/search.json?sort_by=newest&media=video" delegate:self];
 	request.cachePolicy = cachePolicy;
 	request.response = [[[TTURLDataResponse alloc] init] autorelease];
 	request.httpMethod = @"GET";
-	request.userInfo = @"loans";
+	request.userInfo = @"journals";
 	[request send];	
 }
 
@@ -46,65 +46,21 @@
 
 - (void)requestDidFinishLoad:(TTURLRequest*)request {
 	SBJSON *jsonParser = [SBJSON new];
-
-	if ([request.userInfo isEqualToString:@"loans"]) {
-		NSInteger i = 0;
+	if ([request.userInfo isEqualToString:@"journals"]) {
 		TTURLDataResponse *response = request.response;
 		NSString *json = [[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding];	
 		id dictionary = [jsonParser objectWithString:json error:NULL];
-		loans = [[dictionary objectForKey:@"loans"] copy];
-		for (NSString *loanId in [NSArray arrayWithObjects:@"73405", @"64149", @"84623", @"73403", @"73396", @"73386", @"73376", @"73367", nil]) {
-			TTURLRequest *request = [TTURLRequest requestWithURL:[NSString stringWithFormat:@"http://api.kivaws.org/v1/loans/%@/journal_entries.json", loanId] delegate:self];
-			request.cachePolicy = TTURLRequestCachePolicyNoCache;
-			request.response = [[[TTURLDataResponse alloc] init] autorelease];
-			request.httpMethod = @"GET";
-			request.userInfo = @"journals";
-			[request send];	
-		}
-		/*
-		for (NSDictionary *loan in loans) {
-			if (i++ > 10) {
-				break;
-			}
-		
-			TTURLRequest *request = [TTURLRequest requestWithURL:[NSString stringWithFormat:@"http://api.kivaws.org/v1/loans/%@/journal_entries.json", [loan objectForKey:@"id"]] delegate:self];
-			request.cachePolicy = TTURLRequestCachePolicyNoCache;
-			request.response = [[[TTURLDataResponse alloc] init] autorelease];
-			request.httpMethod = @"GET";
-			request.userInfo = @"journals";
-			[request send];	
-		}*/
-		[json release];
-		request.response = nil;
-	} else if ([request.userInfo isEqualToString:@"journals"]) {
-		TTURLDataResponse *response = request.response;
-		NSString *json = [[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding];	
-		id dictionary = [jsonParser objectWithString:json error:NULL];
-		//NSLog(@"journals %@", dictionary);
+		NSLog(@"journals %@", dictionary);
 		if ([[dictionary objectForKey:@"journal_entries"] count] > 0) {
-			[journals addObject:[[dictionary objectForKey:@"journal_entries"] objectAtIndex:0]];
+			for (NSDictionary *journal in [dictionary objectForKey:@"journal_entries"]) {
+				[journals addObject:journal];
+			}
 		}
 		[json release];
 		request.response = nil;
 		[self dataSourceDidFinishLoad];
 	}
-	/*
-	TTURLDataResponse *response = request.response;
-	NSString *json = [[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding];	
-	SBJSON *jsonParser = [SBJSON new];
-	id dictionary = [jsonParser objectWithString:json error:NULL];
-	loans = [[dictionary objectForKey:@"loans"] copy];
-	NSLog(@"loans %@", loans);
-	[json release];
-	request.response = nil;
-	
- 
-	
-	if(lastLoadedTime) {
-		[lastLoadedTime release];
-	}
-	lastLoadedTime = [[NSDate alloc] init];
-	 */
+
 }
 
 
