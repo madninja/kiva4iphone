@@ -46,11 +46,11 @@
 
 - (void)requestDidFinishLoad:(TTURLRequest*)request {
 	SBJSON *jsonParser = [SBJSON new];
+	
 	if ([request.userInfo isEqualToString:@"journals"]) {
 		TTURLDataResponse *response = request.response;
-		NSString *json = [[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding];	
+		NSString *json = [[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding];
 		id dictionary = [jsonParser objectWithString:json error:NULL];
-		NSLog(@"journals %@", dictionary);
 		if ([[dictionary objectForKey:@"journal_entries"] count] > 0) {
 			for (NSDictionary *journal in [dictionary objectForKey:@"journal_entries"]) {
 				[journals addObject:journal];

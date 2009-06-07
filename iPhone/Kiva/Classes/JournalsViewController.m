@@ -12,34 +12,32 @@
 @implementation JournalsViewController
 
 
-//@synthesize searchBar;
 @synthesize journalsDataSource;
 @synthesize navigationController;
 
 
-
+/*
 - (void)loadView {
 	[super loadView];
 	
-	/*
-	[self setSearchBar:[[UISearchBar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 44.0f)]];
-	[searchBar setTintColor:[UIColor colorWithRed:166.0f/255.0f green:182.0f/255.0f blue:134.0f/255.0f alpha:1.0f]];
-	[searchBar setShowsCancelButton:YES];
-	[[self searchBar] setDelegate:self];
-	 */
-	
-	NSLog(@"JournalsViewController.loadView");
-	//navigationController = [[UINavigationController alloc] initWithRootViewController:
 	
 	[self setTableView:[[[UITableView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 480.0f - 44.0f) style:UITableViewStylePlain] autorelease]];
 	[self setVariableHeightRows:YES];
 	[[self tableView] setDelegate:self];
 	[[self tableView] setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 	[[self view] addSubview:[self tableView]];
+<<<<<<< .mine
+	 
+	[self setTitle:@"Your Feed"];
+=======
 	[self setTitle:@"Journals"];
+>>>>>>> .r19
 	[[[self navigationController] navigationBar] setTintColor:[UIColor colorWithRed:166.0f/255.0f green:182.0f/255.0f blue:134.0f/255.0f alpha:1.0f]];	 
 }
+ */
 
+
+/*
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
 	id<TTTableViewDataSource> dataSource = (id<TTTableViewDataSource>)tableView.dataSource;
 	
@@ -47,16 +45,18 @@
 	Class cls = [dataSource tableView:tableView cellClassForObject:object];
 	return [cls tableView:tableView rowHeightForItem:object];
 }
+ */
 
 
 
-
+/*
 - (id<TTTableViewDataSource>)createDataSource {
 	[self setJournalsDataSource:[[[JournalsDataSource alloc] init] autorelease]];
 	[[journalsDataSource delegates] addObject:self];	
 	[journalsDataSource load:TTURLRequestCachePolicyNoCache nextPage:NO];
 	return journalsDataSource;
 }
+ */
 
 
 
