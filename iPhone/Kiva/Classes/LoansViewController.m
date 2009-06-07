@@ -10,6 +10,10 @@
 @synthesize searchBar;
 @synthesize loansDataSource;
 
+-(void)viewWillAppear{
+	[[[self navigationController] navigationBar] setTintColor:[UIColor colorWithRed:166.0f/255.0f green:182.0f/255.0f blue:134.0f/255.0f alpha:1.0f]];
+
+}
 
 - (void)loadView {
 	[super loadView];
@@ -23,8 +27,8 @@
 	[[self tableView] setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 	[[self tableView] setRowHeight:100];
 	[[self view] addSubview:[self tableView]];
-	[self setTitle:@"My Loans"];
-	//[[[self navigationController] navigationBar] setTintColor:[UIColor colorWithRed:166.0f/255.0f green:182.0f/255.0f blue:134.0f/255.0f alpha:1.0f]];
+	[self setTitle:@"Loans"];
+	[[[self navigationController] navigationBar] setTintColor:[UIColor colorWithRed:166.0f/255.0f green:182.0f/255.0f blue:134.0f/255.0f alpha:1.0f]];
 	//[[self navigationItem] setTitleView:searchBar];
 	[[self view] addSubview:searchBar];
 }
@@ -32,7 +36,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar {
 	[[self loansDataSource] setLoans:nil];
-	[[self loansDataSource]  setLoans:[NSMutableArray arrayWithCapacity:0]];
+	[[self loansDataSource] setLoans:[NSMutableArray arrayWithCapacity:0]];
 	[[self tableView] reloadData];
 	
 	[loansDataSource tableView:[self tableView] search:[theSearchBar text]];

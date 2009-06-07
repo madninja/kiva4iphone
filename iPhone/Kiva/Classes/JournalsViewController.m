@@ -36,7 +36,7 @@
 	[[self tableView] setDelegate:self];
 	[[self tableView] setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 	[[self view] addSubview:[self tableView]];
-	[self setTitle:@"Your Feed"];
+	[self setTitle:@"Journals"];
 	[[[self navigationController] navigationBar] setTintColor:[UIColor colorWithRed:166.0f/255.0f green:182.0f/255.0f blue:134.0f/255.0f alpha:1.0f]];	 
 }
 

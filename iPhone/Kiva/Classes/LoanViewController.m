@@ -21,23 +21,26 @@
 }
 
 -(void)viewDidLoad {
-	[self setTitle:@"Loan Details"];
-	[[[self navigationController] navigationBar] setTintColor:[UIColor colorWithRed:166.0f/255.0f green:182.0f/255.0f blue:134.0f/255.0f alpha:1.0f]];
-	
+	//[self setTitle:@"Loan Details"];
+//	[[[self navigationController] navigationBar] setTintColor:[UIColor colorWithRed:166.0f/255.0f green:182.0f/255.0f blue:134.0f/255.0f alpha:1.0f]];
+	NSLog(@"LoanViewController.viewDidLoad");
 	[scrollView setContentSize:CGSizeMake(320.0f, 880.0f)];
-	[super viewDidLoad];
+	//[super viewDidLoad];
 }
 	
 
 
 -(void)viewWillAppear:(BOOL)animated {
 	//loanImage.borderRadius = 6;
+	[[[self navigationController] navigationBar] setTintColor:[UIColor colorWithRed:166.0f/255.0f green:182.0f/255.0f blue:134.0f/255.0f alpha:1.0f]];
+
 	loanImage.backgroundColor = [UIColor clearColor];
 	
 	TTURLRequest *request = [TTURLRequest requestWithURL:[NSString stringWithFormat:@"http://api.kivaws.org/v1/loans/%@.json", loanId] delegate:self];
 	request.response = [[[TTURLDataResponse alloc] init] autorelease];
 	request.httpMethod = @"GET";
 	[request send];
+	
 	[super viewWillAppear:animated];
 }
 
@@ -64,8 +67,12 @@
 		loanImage.contentMode = UIViewContentModeScaleAspectFit;
 		//loanImage.backgroundImageDefault =[UIImage imageNamed:@"Delay.png"];
 		loanImage.image =  [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:image_template, @"w325h250", [[loan objectForKey:@"image"] objectForKey:@"id"]]]]];
+		[self setTitle:[loan objectForKey:@"name"]];
 	}
 	[json release];
+	if([loan objectForKey:@"name"] == nil)
+		[self setTitle:@"Data not available"];
+		
 	request.response = nil;
 }
 

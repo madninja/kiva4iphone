@@ -7,13 +7,20 @@
 
 @synthesize usernameField;
 @synthesize dismissed;
+@synthesize navigationController;
 
 
 -(id)init {
 	if (self = [super initWithNibName:@"RegisterViewController" bundle:[NSBundle mainBundle]]) {
-		//
 	}
+	
 	return self;
+}
+
+-(void) viewDidLoad {
+	NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Register.viewWillAppear");
+	[navigationController setTitle:[usernameField text]];
+
 }
 
 
