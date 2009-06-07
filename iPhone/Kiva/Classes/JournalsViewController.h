@@ -6,15 +6,14 @@
 @class JournalsDataSource;
 
 
-@interface JournalsViewController : TTTableViewController <UITableViewDelegate, TTTableViewDataSourceDelegate,  UISearchBarDelegate> {
-	//UISearchBar *searchBar;
-	JournalsDataSource *journalsDataSource;
+@interface JournalsViewController : TTTableViewController <UITableViewDelegate, TTURLRequestDelegate,  UISearchBarDelegate, UIWebViewDelegate> {
 	UINavigationController *navigationController;
+	IBOutlet UIWebView *webView;
 }
 
-@property (nonatomic, retain) JournalsDataSource *journalsDataSource;
+
 @property (nonatomic, retain) UINavigationController *navigationController;
-//@property (nonatomic, retain) UISearchBar *searchBar;
+@property (nonatomic, retain) IBOutlet UIWebView *webView;
 
 
 @end

@@ -7,12 +7,14 @@
 //
 
 #import "JournalsViewController.h"
-#import "JournalsDataSource.h"
+#import "Templates.h"
+#import <JSON/JSON.h>
+
 
 @implementation JournalsViewController
 
 
-@synthesize journalsDataSource;
+@synthesize webView;
 @synthesize navigationController;
 
 
@@ -36,6 +38,78 @@
 }
  */
 
+
+-(void)viewWillAppear:(BOOL)animated {
+	TTURLRequest *request = [TTURLRequest requestWithURL:@"http://api.kivaws.org/v1/journal_entries/search.json?sort_by=newest&media=video" delegate:self];
+	request.cachePolicy = TTURLRequestCachePolicyNoCache;
+	request.response = [[[TTURLDataResponse alloc] init] autorelease];
+	request.httpMethod = @"GET";
+	request.userInfo = @"journals";
+	[request send];	
+}
+
+
+
+- (void)requestDidStartLoad:(TTURLRequest*)request {
+}
+
+
+- (void)requestDidFinishLoad:(TTURLRequest*)request {
+	SBJSON *jsonParser = [SBJSON new];
+	NSMutableString *html = [NSMutableString string];
+	[html appendString:@"<html><body>"];
+	if ([request.userInfo isEqualToString:@"journals"]) {
+		TTURLDataResponse *response = request.response;
+		NSString *json = [[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding];
+		id dictionary = [jsonParser objectWithString:json error:NULL];
+		if ([[dictionary objectForKey:@"journal_entries"] count] > 0) {
+			for (NSDictionary *journalEntry in [dictionary objectForKey:@"journal_entries"]) {
+				
+				id subject = [journalEntry objectForKey:@"subject"];
+				id body = [journalEntry objectForKey:@"body"];
+				id videoUrl = nil;
+				id imageUrl = nil;
+				if ([[journalEntry objectForKey:@"image"] objectForKey:@"id"] != nil) {
+					imageUrl = [NSString stringWithFormat:image_template, @"w80h80", [[journalEntry objectForKey:@"image"] objectForKey:@"id"]];
+				}
+				if ([[journalEntry objectForKey:@"video"] objectForKey:@"id"] != nil) {
+					videoUrl = [NSString stringWithFormat:video_template, [[journalEntry objectForKey:@"video"] objectForKey:@"youtube_id"]];
+				}
+				
+				[html appendString:@"<b>"];
+				[html appendString:[subject stringByReplacingOccurrencesOfString:@"\\r\\n" withString:@"<br/>"]];
+				[html appendString:@"</b>"];
+				NSLog(@"body: %@", body);
+				[html appendString:[body stringByReplacingOccurrencesOfString:@"\\r\\n" withString:@"<br/>"]];
+				
+				if (imageUrl && !videoUrl) {
+					[html appendString:@"<img src=\""];
+					[html appendString:imageUrl];
+					[html appendString:@"\"/>"];
+				} else if (videoUrl) {
+					[html appendString:[NSString stringWithFormat:youtube_template, videoUrl, videoUrl]];
+					[html appendString:@"<br/><br/>"];
+				}
+			}
+		}
+		[json release];
+		request.response = nil;
+	} else {
+		[html appendString:@"<b>error</b>"];
+	}
+	[html appendString:@"</body></html>"];
+	[webView loadHTMLString:html baseURL:nil];
+}
+
+
+-(void)request:(TTURLRequest*)request didFailLoadWithError:(NSError*)error {
+}
+
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+	NSLog(@"url: %@", request);
+	return YES;
+}
 
 /*
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
