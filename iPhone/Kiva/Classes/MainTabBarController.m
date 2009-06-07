@@ -15,6 +15,7 @@
 @synthesize registerView;
 
 
+
 -(id)initWithCoder:(NSCoder *)coder {
 	if (self = [super initWithCoder:coder]) {
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

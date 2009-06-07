@@ -9,9 +9,11 @@
 @interface JournalsViewController : TTTableViewController <UITableViewDelegate, TTTableViewDataSourceDelegate,  UISearchBarDelegate> {
 	//UISearchBar *searchBar;
 	JournalsDataSource *journalsDataSource;
+	UINavigationController *navigationController;
 }
 
 @property (nonatomic, retain) JournalsDataSource *journalsDataSource;
+@property (nonatomic, retain) UINavigationController *navigationController;
 //@property (nonatomic, retain) UISearchBar *searchBar;
 
 

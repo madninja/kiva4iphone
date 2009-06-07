@@ -14,6 +14,8 @@
 
 //@synthesize searchBar;
 @synthesize journalsDataSource;
+@synthesize navigationController;
+
 
 
 - (void)loadView {
@@ -25,6 +27,9 @@
 	[searchBar setShowsCancelButton:YES];
 	[[self searchBar] setDelegate:self];
 	 */
+	
+	NSLog(@"JournalsViewController.loadView");
+	//navigationController = [[UINavigationController alloc] initWithRootViewController:
 	
 	[self setTableView:[[[UITableView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 480.0f - 44.0f) style:UITableViewStylePlain] autorelease]];
 	[self setVariableHeightRows:YES];

@@ -12,12 +12,14 @@
 @class MainTabBarController;
 
 
-@interface KivaAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
+@interface KivaAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate> {
     UIWindow *window;
     MainTabBarController *tabBarController;
+	UINavigationController *selectedNavigationController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet MainTabBarController *tabBarController;
+@property (nonatomic, retain) IBOutlet UINavigationController *selectedNavigationController;
 
 @end
